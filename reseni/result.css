@@ -1,0 +1,161 @@
+/* Základní styly */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+/* Začneme stylovat! */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.user {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 340px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+}
+
+.user__status {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user__tag {
+  background-color: rgb(204, 204, 204);
+  border-radius: 40px;
+  padding: 0.5rem;
+}
+
+.user__tag--available {
+  background-color: rgb(105, 228, 126);
+}
+
+.user__tag--unavailable {
+  background-color: rgb(255, 123, 97);
+}
+
+.user__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
+.user__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user__info {
+  margin-bottom: 10px;
+}
+
+.user__heading {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.user__description {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.user__hobby {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+}
+
+.user__hobby li::before {
+  content: "❤️"; 
+  margin-right: 5px;
+}
+
+.user__description ::first-letter {
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  position: relative;
+}
+
+a:hover::after {
+  content: '';  
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, #e1466a 0%, rgba(131,217,255,1) 82%, rgba(131,206,255,1) 100%);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+a:visited {
+  color: #0065d1;
+}
+
+a:active {
+  font-weight: bold;
+}
+
+.user__buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+.user__button {
+  padding: 10px 20px;
+  position: relative;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user__button--twitter {
+  background-color: rgb(29, 155, 240);
+  border: 3px solid rgb(29, 155, 240);
+}
+
+.user__button--facebook {
+  background-color: #3b5998;
+  border: 3px solid #3b5998;
+}
+
+.user__button--instagram {
+  background-color: #E1466A;
+  border: 3px solid #E1466A;
+}
+
+.user__button:hover {
+  border: 3px solid rgba(0, 0, 0, 0.216);
+}
+
+.user__button:active {
+  border: 2px solid rgb(255, 255, 255);
+}
